@@ -5,18 +5,103 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="src/output.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <title>LumoGlow</title>
     </head>
-    <body class="bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('img/home-bg.webp');">
+    <body class="font-encodesansse bg-cover bg-center bg-no-repeat h-screen" style="background-image: url('img/home.webp');">
         <div class="absolute inset-0 bg-black/60"></div>
-        <div class="relative z-10 min-h-screen">
-            <header class="flex p-10">
-                <h1 class="font-raleway text-5xl font-bold text-sky-50">
-                    LumoGlow
-                </h1>
+        <div class="relative z-10 h-screen text-sky-50">
+            <header class="font-raleway flex p-10 mb-20 justify-between items-center">
+                <div class="flex-1">
+                    <h1 class="text-5xl font-bold">
+                        LumoGlow
+                    </h1>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <ul class="flex gap-5 text-3xl list-none p-0 m-0">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#review">Review</a></li>
+                    </ul>
+                </div>
+                <div class="flex-1 text-right">
+                    <h2 class="text-2xl">+62 812 3456 7890</h2>
+                </div>
             </header>
-            
+            <section id="#home" class="flex items-center justify-center">
+                <div class="mt-32 text-center">
+                    <p class="tracking-wide text-2xl font-extralight">Feel the glow, live the vibe.</p>
+                    <h1 class="font-raleway text-7xl font-bold leading-tight">Light up your mood.<br />Elevate your everyday.</h1>
+                </div>
+            </section>
         </div>
+        <section id="about" class="bg-slate-300 text-slate-950 flex">
+            <div class="flex-1 mt-28 ml-40">
+                <h1 class="font-raleway text-7xl font-bold mb-20">About</h1>
+                <div class="text-lg leading-relaxed mr-40 text-justify">
+                    <p class="mb-8">At <strong>LumoGlow</strong>, 
+                        we believe that lighting should be more than just functional — 
+                        it should be emotional. That's why we created a lighting 
+                        experience that responds to your environment, your mood, and
+                        your lifestyle.</p>
+                    <p class="mb-8">Our mood-responsive LED lamp  uses smart sensing and
+                        adaptive color technology to match your energy, calm your space,
+                        or set the tone for productivity. Whether you're winding down
+                        after a long day, getting into focus mode, or setting the mood
+                        for a cozy evening — LumoGlow lights the way.</p>
+                    <p class="mb-8">Designed with minimalism in mind and powered by
+                        intelligent lighting, LumoGlow is the perfect fusion of form and
+                        feeling. It’s not just a lamp — it’s a daily companion that
+                        understands your rhythm.</p>
+                    <p class="">Join us as we redefine what lighting means — where
+                        innovation meets atmosphere, and every glow tells a story.</p>
+                </div>
+            </div>
+            <img src="img/about.webp" class="flex-1">
+        </section>
+        <section id="review" class="bg-slate-300 text-slate-950 pb-20">
+            <h1 class="font-raleway text-7xl font-bold mb-20 text-center pt-28">Reviews</h1>
+            <div class="overflow-hidden relative w-full max-w-3xl mx-auto mt-10">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+                        <img src="img/review-1.webp" class="w-50 object-cover rounded-full mb-10">
+                        <h2 class="font-raleway text-5xl font-bold mb-5">Liam Hart</h2>
+                        <p class="italic text-center mx-20">"LumoGlow has completely
+                            changed the vibe of my workspace. The light adapts perfectly
+                            to my focus sessions, and it even helps me relax after
+                            hours. It feels like the lamp understands me."</p>
+                    </div>
+                    <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+                        <img src="img/review-2.webp" class="w-50 object-cover rounded-full mb-10">
+                        <h2 class="font-raleway text-5xl font-bold mb-5">Sofia Tan</h2>
+                        <p class="italic text-center mx-20">"I love how the light
+                            adjusts to my mood without needing to touch anything. It’s
+                            minimal, elegant, and surprisingly powerful. Makes my room
+                            feel like a luxury spa."</p>
+                    </div>
+                    <div class="w-full flex-shrink-0 flex flex-col items-center justify-center">
+                        <img src="img/review-3.webp" class="w-50 object-cover rounded-full mb-10">
+                        <h2 class="font-raleway text-5xl font-bold mb-5">Daniel Reyes</h2>
+                        <p class="italic text-center mx-20">"The design is sleek, the
+                            responsiveness is impressive, and the glow is so calming. I
+                            use it daily whether I’m working, gaming, or just reading a
+                            book. Worth every cent."</p>
+                    </div>
+                </div>
+                <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-950/50 text-white px-3 py-1 rounded-full">
+                    ‹
+                </button>
+                <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-950/50 text-white px-3 py-1 rounded-full">
+                    ›
+                </button>
+            </div>
+        </section>
+        <footer class="bg-slate-800 text-sky-50 py-10">
+            <p class="text-sm text-center">
+                  © 2025 LumoGlow. All rights reserved. Designed to light your moments.
+            </p>
+        </footer>
         
+        <script src="src/script.js"></script>
     </body>
 </html>
